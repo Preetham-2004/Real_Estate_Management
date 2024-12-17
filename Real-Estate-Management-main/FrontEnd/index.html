@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Real Estate Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Main Content Wrapper -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Real Estate Management</h1>
+        </header>
+
+        <!-- Add Property Section -->
+        <section class="add-property">
+            <h2>Add Property</h2>
+            <form id="add-property-form">
+                <div class="form-group">
+                    <label for="propertyName">Property Name</label>
+                    <input type="text" id="propertyName" name="propertyName" required>
+                </div>
+                <div class="form-group">
+                    <label for="propertyPrice">Price</label>
+                    <input type="number" id="propertyPrice" name="propertyPrice" required>
+                </div>
+                <div class="form-group">
+                    <label for="propertyArea">Area (sq ft)</label>
+                    <input type="number" id="propertyArea" name="propertyArea" required>
+                </div>
+                <div class="form-group">
+                    <label for="propertyImage">Property Image URL</label>
+                    <input type="url" id="propertyImage" name="propertyImage" required>
+                </div>
+                <div class="form-group">
+                    <label for="propertyDescription">Description</label>
+                    <input id="propertyDescription" name="propertyDescription" required>
+                </div>
+                <div class="form-group">
+                    <label for="propertyContact">Contact</label>
+                    <input type="text" id="propertyContact" name="propertyContact" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Property</button>
+            </form>
+        </section>
+
+        <!-- Display Added Properties -->
+        <section class="properties-list">
+            <h2>Properties</h2>
+            <!-- Sort Options -->
+            <div class="sort-options">
+                <label for="sortBy">Sort By:</label>
+                <select id="sortBy">
+                    <option value="name">Name</option>
+                    <option value="price">Price</option>
+                    <option value="area">Area</option>
+                </select>
+            
+                <label for="sortOrder">Order:</label>
+                <select id="sortOrder">
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Descending</option>
+                </select>
+            </div>
+            
+
+            <div id="property-list" class="property-list">
+                <!-- Properties will appear here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

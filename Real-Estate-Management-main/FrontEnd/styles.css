@@ -1,0 +1,315 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f3f4f7, #e9ebf3);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(135deg, #6a85b6, #bac8e0);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.header:before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -100%;
+    left: -100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    animation: rotateWave 10s linear infinite;
+    z-index: 0;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.header h1 span {
+    color: #f9fafb;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    z-index: 1;
+    position: relative;
+    font-style: italic;
+}
+
+/* Form Section */
+.add-property {
+    padding: 50px;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: -20px;
+    border-radius: 0 0 12px 12px;
+}
+
+.add-property h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #444;
+    border-bottom: 3px solid #6a85b6;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Form Inputs */
+.form-group {
+    margin-bottom: 30px;
+    display: grid;
+    gap: 15px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #444;
+    text-transform: capitalize;
+}
+
+.form-group input {
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: #fdfdfe;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #6a85b6;
+    box-shadow: 0 0 8px rgba(106, 133, 182, 0.5);
+    outline: none;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #6a85b6, #4c669f);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(106, 133, 182, 0.4);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #92a9d1, #6a85b6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(146, 169, 209, 0.5);
+}
+
+/* Sorting Section */
+.sort-options {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #e0e4ed;
+    border-radius: 12px;
+}
+
+.sort-options label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+}
+
+.sort-options select {
+    padding: 5px 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+}
+
+.sort-options select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(93, 125, 191, 0.5);
+}
+
+/* Adjust spacing between sort controls */
+.sort-options select,
+.sort-options label {
+    margin: 0;
+}
+
+/* Optional: Center the sort section if needed */
+.sort-options {
+    justify-content: flex-start; /* Change to center if you want centered alignment */
+}
+
+
+/* Properties List */
+.properties-list {
+    padding: 50px;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border-top: 1px solid #e6e9f0;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.properties-list h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom: 3px solid #6a85b6;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.property-item {
+    display: flex;
+    align-items: center; /* Center align the items vertically */
+    justify-content: space-between; /* Distribute the image, text, and buttons evenly */
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.property-item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.property-item img {
+    width: 160px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.property-details {
+    flex-grow: 1;
+}
+
+.property-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #6a85b6;
+    text-transform: uppercase;
+}
+
+.property-details p {
+    font-size: 1rem;
+    color: #555;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Action Buttons (Update & Delete) */
+.action-buttons {
+    display: flex;
+    gap: 15px; /* Adjust horizontal spacing between the buttons */
+    justify-content: center;
+}
+
+.update-button,
+.delete-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Subtle transition for hover effect */
+    width: 120px; /* Fixed width for both buttons */
+}
+
+/* Action Buttons (Update & Delete) */
+.update-button {
+    background: #5d7dbf;
+    color: white;
+}
+
+.update-button:hover {
+    background: #3e5c99;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(93, 125, 191, 0.3);
+}
+
+.delete-button {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-button:hover {
+    background: #b02a37;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateWave {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
