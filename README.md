@@ -25,10 +25,6 @@ A user-friendly form allows interaction with these APIs to fetch, add, update, a
    ```bash
    git clone https://github.com/Preetham-2004/real-estate-management.git
    ```
-2. Navigate to the project directory:
-   ```bash
-   cd real-estate-management
-   ```
    
 ## Usage
 - Fetch, add, update, and delete property details using the form or API.
